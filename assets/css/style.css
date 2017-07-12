@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, 
+body {
+    height: 95%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    color: #232323;
+    background: #cb2d3e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(left, #ef473a, #cb2d3e);
+    background: -o-linear-gradient(left, #ef473a, #cb2d3e);
+    background: linear-gradient(to right, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: left;
+    background-color: #4BBF6B;
+    padding: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 5px;
+}
+
+input {
+    background-color: #f7f7f7;
+    border: none;
+    padding: 5px;
+    height: 40px;
+    color: #4BBF6B;
+    font-size: 18px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+}
+
+input:focus {
+    border: 2px solid #4BBF6B;
+    outline: none;
+    background-color: #ffffff;
+}
+
+li {
+    height: 35px;
+    line-height: 35px;
+    margin-left: 10px;
+}
+
+li:nth-child(2n){
+    background-color: #F7F7F7;
+}
+
+span {
+    width: 0;
+    display: inline-block;
+    background-color: #CC2E3E;
+    color: #ffffff;
+    text-align: center;
+    transition: all ease-in 0.2s;
+    opacity: 0;
+}
+
+li:hover span {
+    width: 40px;
+    opacity: 1.0;
+    margin-right: 10px;
+}
+
+li:hover {
+    margin-left: 0;
+}
+
+#container {
+    background-color: #FFFFFF;
+    width: 80%;
+    margin: 50px auto;
+    -webkit-box-shadow: 10px 10px 100px -30px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 100px -30px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 100px -30px rgba(0,0,0,0.75);
+}
+
+.completed {
+    color: gray;
+    text-decoration: line-through;
+}
