@@ -15,13 +15,19 @@ $("ul").on("click", "span", function(e){
 
 // Add a new Todo
 $("input").on("keypress", function(event){
-    //var deleteIcon = "<i class=""fa fa-trash-o""aria-hidden="true">";
     var newTodo = $(this).val();
     if(event.which === 13){
         $("ul").append("<li><span><i class='fa fa-trash-o' aria-hidden='true'></i></span> " + newTodo +  "</li>");
         $("input").val("");
         pushToArray(newTodo);
     }
+});
+
+// Toggle for add new Todo
+$(".fa-minus").on("click", function(){
+    $("input").fadeToggle(200);
+    $(this).toggleClass("fa-plus");
+    $(this).toggleClass("fa-minus");
 });
 
 // Create an empty tasks arrays
