@@ -7,7 +7,7 @@ $("ul").on("click", "li", function(){
 $("ul").on("click", "span", function(e){
     $(this).parent().fadeOut(500, function(){
         $(this).remove();
-        var toDel = $(this).text().replace("X ", "");
+        var toDel = $(this).text().replace(" ", "");
         removeFromArray(toDel);
     });
     e.stopPropagation;
@@ -20,6 +20,7 @@ $("input").on("keypress", function(event){
         $("ul").append("<li><span><i class='fa fa-trash-o' aria-hidden='true'></i></span> " + newTodo +  "</li>");
         $("input").val("");
         pushToArray(newTodo);
+        updateList()
     }
 });
 
@@ -42,3 +43,36 @@ function removeFromArray(rem){
     var remove = task.indexOf(rem);
     task.splice(remove, 1);
 };
+
+
+// WORK IN PROGRESS
+$(document).ready(function(){
+    var loadedList = loadList(listObj);
+    console.log(loadedList)
+});
+
+var listObj = {};
+
+function ArrToObj(arr) {
+  var taskObj = {};
+  for (var i = 0; i < arr.length; ++i){
+      listObj[i] = arr[i]; 
+  }
+    return listObj
+}
+
+function saveList(obj){
+    // Put the object into storage
+    localStorage.setItem('obj', JSON.stringify(obj));
+}
+
+function loadList(obj){
+    // Retrieve the object from storage
+    var retrievedObj = localStorage.getItem('obj');
+    console.log('retrievedObj: ', JSON.parse(retrievedObj));
+}
+
+function updateList(){
+    ArrToObj(task);
+    saveList(listObj);
+}
